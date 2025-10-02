@@ -30,16 +30,25 @@ body {
 .dottedBackground {
   background-image: radial-gradient(circle at center, #000 1px, transparent 0);
   background-size: 20px 20px; /* Controls the spacing between dots */
-  background-repeat: repeat; /* Ensures the pattern repeats across the background */
+  background-repeat: repeat;
 }
 
 .windowTitle{
     font-weight: normal;
-    border: 1px solid black;
-    width: 91%;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    width: fit-content;
     text-align: center;
     height: fit-content;
     background-color: white;
-    margin: .5em 1em;
+    margin: -.5em 1em 1em 1em;
     padding: 0 .7em;
+}
+
+.windowTitle:is(.right){
+    align-self: flex-end;
+}
+
+.windowTitle:is(.left){
+    align-self: flex-start;
 }
