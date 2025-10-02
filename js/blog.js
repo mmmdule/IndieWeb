@@ -21,5 +21,7 @@ try {
     blogLead.textContent = blogPost.lead;
     blogContent.innerHTML = blogLead.outerHTML + blogPost.content;
 } catch (error) {
-    console.error(error.message);
+    blogTitle.textContent = "Something went wrong!";
+    blogLead.textContent = "It really didn't go right.";
+    blogContent.innerHTML = blogLead.outerHTML + "<p>Check the url, your Internet connection etc.<p>";
 }
