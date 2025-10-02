@@ -11,6 +11,7 @@ body {
     background-color: white;
     height: fit-content;
 }
+
 .windowParent:hover {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOUlEQVQYV43MQQ4AIAgDQfv/R4OYaFChsOfJYvQSNJxMgwouZDMGD2LwQhn8UARD9MIUeUjRhiUyqPw8Cgq7TDlmAAAAAElFTkSuQmCC) repeat;
     background-color: white;
@@ -28,12 +29,13 @@ body {
 }
 
 .dottedBackground {
-  background-image: radial-gradient(circle at center, #000 1px, transparent 0);
-  background-size: 20px 20px; /* Controls the spacing between dots */
-  background-repeat: repeat;
+    background-image: radial-gradient(circle at center, #000 1px, transparent 0);
+    background-size: 20px 20px;
+    /* Controls the spacing between dots */
+    background-repeat: repeat;
 }
 
-.windowTitle{
+.windowTitle {
     font-weight: normal;
     border-left: 3px dashed black;
     border-right: 3px dashed black;
@@ -45,16 +47,34 @@ body {
     padding: 0 .7em;
 }
 
-.windowTitle:is(.right){
+.windowTitle:is(.right) {
     align-self: flex-end;
 }
 
-.windowTitle:is(.left){
+.windowTitle:is(.left) {
     align-self: flex-start;
 }
 
-.windowBlogLead{
+.windowBlogLead {
     color: rgb(85, 85, 85);
     font-style: italic;
     font-weight: 500;
+}
+
+#blogPosts {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#blogPosts a {
+    color: blue;
+}
+
+#blogPosts a:visited {
+    color: blue;
+}
+
+#blogPosts a:focus {
+    color: red;
 }
