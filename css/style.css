@@ -52,3 +52,9 @@ body {
 .windowTitle:is(.left){
     align-self: flex-start;
 }
+
+.windowBlogLead{
+    color: rgb(85, 85, 85);
+    font-style: italic;
+    font-weight: 500;
+}

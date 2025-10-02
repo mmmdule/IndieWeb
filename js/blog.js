@@ -3,10 +3,11 @@ let postIndex = parseInt(params.get("i"));
 
 let blogObj = {};
 
-const blogDataUrl = '../data/blog.json';
+const blogDataUrl = 'https://raw.githubusercontent.com/mmmdule/IndieWeb/blog/data/blog.json';
 
 // HTML DOM elements
 const blogTitle = document.querySelector("#blogPostWindow > .windowTitle");
+const blogLead = document.querySelector(".windowContent > .windowBlogLead");
 const blogContent = document.querySelector("#blogPostWindow > .windowContent");
 
 try {
@@ -16,8 +17,9 @@ try {
     }
 
     const blogPost = (await response.json())[postIndex];
-    blogTitle.innerHTML = blogPost.title;
-    blogContent.innerHTML = blogPost.content;
+    blogTitle.textContent = blogPost.title;
+    blogLead.textContent = blogPost.lead;
+    blogContent.innerHTML = blogLead.outerHTML + blogPost.content;
 } catch (error) {
     console.error(error.message);
 }
