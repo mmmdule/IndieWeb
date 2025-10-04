@@ -191,6 +191,14 @@ body {
         width: 97% !important;
         margin-top: .75em !important;
     }
+
+    .windowParent:has(> #dogWindow) {
+        width: 90% !important;
+    }
+
+    #dogWindow > img {
+        width: 100%;
+    }
 }
 
 nav {
@@ -230,4 +238,13 @@ nav a:hover:not(.active) {
 nav a.active {
     background-color: orange;
     color: black;
+}
+
+#dogWindow {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    overflow-x: auto;
+    height: fit-content;
+    padding: 0;
 }
