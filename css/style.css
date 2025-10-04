@@ -1,5 +1,7 @@
 body {
     font-family: "Calibri";
+    display: flex;
+    flex-direction: column;
 }
 
 .windowParent {
@@ -43,7 +45,7 @@ body {
     text-align: center;
     height: fit-content;
     background-color: white;
-    margin: -.5em 1em 1em 1em;
+    margin: -.6em 1em 1em 1em;
     padding: 0 .7em;
 }
 
@@ -67,6 +69,7 @@ body {
     min-height: 100vh;
 }
 
+
 #blogPosts a {
     color: blue;
 }
@@ -77,4 +80,154 @@ body {
 
 #blogPosts a:focus {
     color: red;
+}
+
+#homeMain {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    width: 80%;
+}
+
+#homeMain section {
+    background-color: white;
+    border: 1px solid black;
+    min-width: 70%;
+    width: 70%;
+    padding: .75em .75em;
+}
+
+#homeMain>#sidebarsParent {
+    width: 30%;
+}
+
+#homeMain>#sidebarsParent>ul {
+    list-style-type: none;
+    margin-bottom: 2em;
+    padding: 0 1em;
+}
+
+#homeMain>#sidebarsParent>ul>h2 {}
+
+#homeMain>#sidebarsParent>ul li {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin: .5em 0;
+    padding: .5em 0;
+}
+
+#homeMain>#sidebarsParent>ul li:last-child {
+    border-bottom: none;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
+#homeMain>#sidebarsParent>ul li:first-child {
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+#homeMain>#sidebarsParent>ul li:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+#homeMain>#sidebarsParent>ul li>img,
+#homeMain #musicSidebar svg {
+    vertical-align: middle;
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: .5em;
+}
+
+#homeMain>#sidebarsParent>ul li>a {
+    color: black;
+}
+
+#homeMain>#sidebarsParent>ul li>a:hover {
+    color: orange;
+}
+
+#gamesSidebar {
+    margin-top: 0;
+}
+
+#musicSidebar li:after {
+    content: "\00a0";
+}
+
+@media screen and (max-width: 600px) {
+    #homeMain {
+        flex-direction: column !important;
+        width: 95% !important;
+    }
+
+    #homeMain section {
+        width: 95% !important;
+        margin-bottom: 2em;
+    }
+
+    #homeMain>#sidebarsParent {
+        width: 100% !important;
+    }
+
+    nav {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    nav a {
+        padding: .5em 1em !important;
+    }
+
+    #blogPosts .windowParent {
+        width: 97% !important;
+    }
+
+    #blogPostWindow {
+        width: 97% !important;
+        margin-top: .75em !important;
+    }
+}
+
+nav {
+    width: 80%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+
+
+nav a {
+    /* display: block; */
+    color: white;
+    text-align: center;
+    padding: 1em 1.5em;
+    /* 14px 16px */
+    ;
+    text-decoration: none;
+    flex-grow: 0;
+    border: 3px solid transparent;
+}
+
+nav a:hover:not(.active) {
+    background-color: #111;
+    border: 3px dashed orange;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOUlEQVQYV43MQQ4AIAgDQfv/R4OYaFChsOfJYvQSNJxMgwouZDMGD2LwQhn8UARD9MIUeUjRhiUyqPw8Cgq7TDlmAAAAAElFTkSuQmCC) repeat;
+    backdrop-filter: contrast(30%);
+}
+
+nav a.active {
+    background-color: orange;
+    color: black;
 }

@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulo's Website</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+
+<body class="dottedBackground">
+    <nav>
+        <a class="active" href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="/blog.html">Blog</a>
+        <a href="#dog">Dog</a>
+    </nav>
+    <main id="homeMain">
+        <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eos soluta vel illum a voluptas
+            minima dolores, veniam dicta magnam inventore earum delectus optio ullam error cumque neque corrupti,
+            commodi iure et voluptate recusandae? Ex vitae iusto excepturi cumque. Incidunt placeat ullam atque dolorum
+            nam esse nobis facilis. Molestias, ullam.</section>
+        <div id="sidebarsParent">
+            <!-- Consider putting these into a JSON -->
+            <ul id="gamesSidebar" class="windowParent">
+                <h2 class="windowTitle">Currently playing</h2>
+                <div class="windowContent">
+                    <li title="(stuck in Gotham since 2015)">
+                        <img src="img/bak-logo.jpg" alt="BAK">
+                        Batman Arkham Knight
+                    </li>
+                    <li title="(ArmA 2 was more fun)">
+                        <img src="img/arma3.webp" alt="ARMA3">
+                        ArmA 3
+                    </li>
+                    <li title="(I wish all the world's evil was ripped and torn)">
+                        <img src="img/doom_logo.png" alt="DOOM">
+                        DOOM 2016
+                    </li>
+                    <li title="(the HD collection one)">
+                        <img src="img/mgs3-fox.webp" alt="MGS3">
+                        Metal Gear Solid 3
+                    </li>
+                </div>
+            </ul>
+            <ul id="musicSidebar" class="windowParent">
+                <h2 class="windowTitle">Currently listening to</h2>
+                <div class="windowContent">
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=Z-71-i1akB0" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z" />
+                            </svg>
+                            meathook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=uAE6Il6OTcs" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z" />
+                            </svg>
+                            Rooster
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=8iATPHyiBEI" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z" />
+                            </svg>
+                            Killing Me Softly
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=E2HeDHkL9kg" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z" />
+                            </svg>
+                            Big in Japan
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </main>
 </body>
+
 </html>

@@ -4,7 +4,7 @@ let postIndex = parseInt(params.get("i"));
 let blogObj = {};
 const blogPosts = [];
 
-const blogDataUrl = 'https://raw.githubusercontent.com/mmmdule/IndieWeb/blog/data/blog.json?v=1';
+const blogDataUrl = '../data/blog.json';
 
 async function loadPost() {
     // HTML DOM elements
@@ -22,6 +22,7 @@ async function loadPost() {
         blogTitle.textContent = blogPost.title;
         blogLead.textContent = blogPost.lead;
         blogContent.innerHTML = blogLead.outerHTML + blogPost.content;
+        document.title = blogPost.title;
     } catch (error) {
         blogTitle.textContent = "Something went wrong!";
         blogLead.textContent = "It really didn't go right.";
